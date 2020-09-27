@@ -220,7 +220,7 @@ action: function(cache) {
 			options.around = msgid;
 			break;
 	}
-	options.limit = Math.min(parseInt(this.evalMessage(data.count, cache)), 100);
+	options.limit = Math.min(parseInt(this.evalMessage(data.count, cache)), 1000);
 	if(source && source.fetchMessages) {
 		source.fetchMessages(options).then(function(messages) {
 			let Con0 = this.evalMessage(data.Con0, cache)
@@ -289,6 +289,7 @@ action: function(cache) {
 },
 
 //---------------------------------------------------------------------
+
 // Action Bot Mod
 //
 // Upon initialization of the bot, this code is run. Using the bot's
